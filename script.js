@@ -3,7 +3,6 @@ const siteNav = document.querySelector(".site-nav");
 const year = document.querySelector("#year");
 const topLinks = document.querySelectorAll('a[href="#top"]');
 const emailButton = document.querySelector("[data-copy-email]");
-const emailCopyStatus = document.querySelector(".email-copy-status");
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -41,13 +40,8 @@ if (emailButton) {
 
     try {
       await navigator.clipboard.writeText(email);
-      if (emailCopyStatus) {
-        emailCopyStatus.textContent = "Email copied: " + email;
-      }
     } catch {
-      if (emailCopyStatus) {
-        emailCopyStatus.textContent = email;
-      }
+      window.location.href = `mailto:${email}`;
     }
   });
 }

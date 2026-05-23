@@ -529,12 +529,6 @@ a.project-card:focus-visible {
   background: transparent;
 }
 
-.email-copy-status {
-  color: rgba(255, 255, 255, 0.82);
-  font-weight: 750;
-  overflow-wrap: anywhere;
-}
-
 .site-footer {
   align-items: center;
   background: var(--charcoal);
